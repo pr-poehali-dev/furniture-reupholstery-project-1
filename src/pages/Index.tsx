@@ -85,7 +85,13 @@ export default function Index() {
               <a key={l.href} href={l.href} className="nav-link text-sm tracking-wider">{l.label}</a>
             ))}
           </div>
-          <a href="#contacts" className="hidden md:block btn-gold">Заказать</a>
+          <div className="hidden md:flex items-center gap-4">
+            <a href="tel:+79236566500" className="nav-link flex items-center gap-2 text-sm tracking-wider">
+              <Icon name="Phone" size={14} style={{ color: "#C9A84C" }} />
+              8-923-656-6500
+            </a>
+            <a href="#contacts" className="btn-gold">Заказать</a>
+          </div>
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             <Icon name={menuOpen ? "X" : "Menu"} size={24} style={{ color: "#C9A84C" }} />
           </button>
@@ -344,9 +350,9 @@ export default function Index() {
             </h2>
             <div className="space-y-6">
               {[
-                { icon: "Phone", label: "Телефон", value: "8-923-656-6500" },
-                { icon: "MapPin", label: "Адрес", value: "Барнаул, ул. Попова 181/1" },
-                { icon: "Clock", label: "Режим работы", value: "Пн–Сб: 9:00 – 19:00" },
+                { icon: "Phone", label: "Телефон", value: "8-923-656-6500", href: "tel:+79236566500" },
+                { icon: "MapPin", label: "Адрес", value: "Барнаул, ул. Попова 181/1", href: "https://yandex.ru/maps/?text=Барнаул+ул+Попова+181/1" },
+                { icon: "Clock", label: "Режим работы", value: "Пн–Сб: 9:00 – 19:00", href: null },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4">
                   <div className="w-10 h-10 flex items-center justify-center mt-0.5 flex-shrink-0" style={{ border: "1px solid rgba(201,168,76,0.3)" }}>
@@ -354,7 +360,14 @@ export default function Index() {
                   </div>
                   <div>
                     <div className="text-xs tracking-wider uppercase mb-1" style={{ color: "#5E5044" }}>{c.label}</div>
-                    <div style={{ color: "#C0B49A" }}>{c.value}</div>
+                    {c.href ? (
+                      <a href={c.href} target={c.href.startsWith("tel") ? "_self" : "_blank"} rel="noopener noreferrer" style={{ color: "#C9A84C", textDecoration: "none", transition: "color 0.2s" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.color = "#E8C97A")}
+                        onMouseLeave={(e) => (e.currentTarget.style.color = "#C9A84C")}
+                      >{c.value}</a>
+                    ) : (
+                      <div style={{ color: "#C0B49A" }}>{c.value}</div>
+                    )}
                   </div>
                 </div>
               ))}
