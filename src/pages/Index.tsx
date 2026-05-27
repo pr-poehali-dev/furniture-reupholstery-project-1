@@ -135,7 +135,10 @@ export default function Index() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#contacts" className="btn-gold">Получить расчёт</a>
-              <a href="#gallery" className="btn-outline-gold">Смотреть работы</a>
+              <a href="tel:+79236566500" className="btn-outline-gold flex items-center gap-2">
+                <Icon name="Phone" size={15} />
+                Позвонить
+              </a>
             </div>
             <div className="mt-14 flex gap-10">
               {[{ num: "15+", label: "лет опыта" }, { num: "2 000+", label: "выполнено работ" }, { num: "3 года", label: "гарантия" }].map((s) => (
