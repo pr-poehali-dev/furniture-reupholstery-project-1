@@ -117,7 +117,7 @@ export default function Index() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="mb-4 tracking-[0.3em] uppercase text-xs" style={{ color: "#C9A84C" }}>
-              Мастерская перетяжки мебели
+              Перетяжка мебели №1 · Барнаул
             </p>
             <h1 className="mb-6 leading-[1.05]" style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(3rem, 7vw, 6rem)", fontWeight: 300, color: "#EDE8DC" }}>
               Новая жизнь{" "}
@@ -344,9 +344,8 @@ export default function Index() {
             </h2>
             <div className="space-y-6">
               {[
-                { icon: "Phone", label: "Телефон", value: "+7 (900) 000-00-00" },
-                { icon: "Mail", label: "Email", value: "info@restyle.ru" },
-                { icon: "MapPin", label: "Адрес", value: "Москва, ул. Мастеровая, 12" },
+                { icon: "Phone", label: "Телефон", value: "8-923-656-6500" },
+                { icon: "MapPin", label: "Адрес", value: "Барнаул, ул. Попова 181/1" },
                 { icon: "Clock", label: "Режим работы", value: "Пн–Сб: 9:00 – 19:00" },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4">
