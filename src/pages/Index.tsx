@@ -74,10 +74,10 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
           <a href="#home" className="flex items-center gap-3">
             <div className="w-8 h-8 flex items-center justify-center" style={{ border: "1px solid #C9A84C" }}>
-              <span style={{ color: "#C9A84C", fontSize: "1rem", fontFamily: "Cormorant Garamond, serif" }}>Р</span>
+              <span style={{ color: "#C9A84C", fontSize: "1rem", fontFamily: "Cormorant Garamond, serif" }}>П</span>
             </div>
             <span style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.3rem", fontWeight: 300, letterSpacing: "0.15em", color: "#EDE8DC" }}>
-              РеСтайл
+              Перетяжка мебели №1
             </span>
           </a>
           <div className="hidden md:flex items-center gap-8">
@@ -397,8 +397,8 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="py-8 px-6" style={{ borderTop: "1px solid rgba(201,168,76,0.1)" }}>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <span style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.2rem", fontWeight: 300, color: "#5E5044" }}>РеСтайл</span>
-          <p className="text-xs" style={{ color: "#3E342A" }}>© 2024 РеСтайл. Все права защищены.</p>
+          <span style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.2rem", fontWeight: 300, color: "#5E5044" }}>Перетяжка мебели №1</span>
+          <p className="text-xs" style={{ color: "#3E342A" }}>© 2024 Перетяжка мебели №1. Все права защищены.</p>
           <div className="flex gap-6">
             {navLinks.map((l) => (
               <a key={l.href} href={l.href} className="text-xs nav-link">{l.label}</a>
